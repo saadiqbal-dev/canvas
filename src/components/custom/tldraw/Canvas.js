@@ -1,4 +1,5 @@
 import { Tldraw, createTLStore, defaultShapeUtils } from "@tldraw/tldraw";
+import { Tldraw, createTLStore, defaultShapeUtils } from "@tldraw/tldraw";
 import { useEditor, useValue } from "@tldraw/editor";
 import { MAX_ZOOM, MIN_ZOOM } from "@tldraw/tldraw";
 import React, { useCallback, useEffect, useState } from "react";
@@ -10,6 +11,7 @@ import TopZone from "./TopZone";
 import styled from "styled-components";
 import { useAccountId } from "near-social-vm";
 import { useHistory, useLocation } from "react-router-dom";
+import { Templates } from "./Templates";
 import { Templates } from "./Templates";
 
 const shapeUtils = [ResponseShapeUtil];
@@ -257,6 +259,7 @@ function TldrawCanvas({
         <ActionButton path={persistance} />
         <TldrawLogo />
         <ZoomIn />
+        <Templates />
         <Templates />
         <Test />
       </Tldraw>
